@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './../styles/Navbar.module.css';
 import Link from 'next/link';
 import globalStyles from './../styles/Global.module.css';
+import HorizontalLine from './HorizontalLine';
 
 const Navbar = () => {
     return (
@@ -36,7 +37,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={globalStyles['horizontal-line']} ></div>
+            <HorizontalLine />
         </nav>
     )
 }

@@ -8,6 +8,9 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
+      <video src={'/promo.mp4'} autoPlay loop muted style={{
+        width: '100%'
+      }} />
     </>
   )
 }
