@@ -1,7 +1,18 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Lustria, Lato } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const lustria = Lustria({
+  subsets: ['latin'],
+  variable: '--font-lustria',
+  display: 'swap',
+  weight: ['400']
+})
+const lato = Lato({
+  subsets: ['latin'],
+  variable: '--font-lato',
+  display: 'swap',
+  weight: ['400', '700']
+}) 
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${lustria.variable} ${lato.variable}`}>{children}</body>
     </html>
   )
 }
