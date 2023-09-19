@@ -3,6 +3,7 @@ import globalStyles from './../styles/Global.module.css';
 import HorizontalLine from './HorizontalLine';
 
 const HeroSection = () => {
+
     return (
         <>
             <header className={styles['hero-section']}>

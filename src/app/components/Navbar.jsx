@@ -6,7 +6,7 @@ import HorizontalLine from './HorizontalLine';
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav className={styles['nav']}>
             <div className={globalStyles['page-padding']} >
                 <div className={styles['nav-component']} >
                     <div className={styles['nav-menu']} >

@@ -12,7 +12,7 @@ const lato = Lato({
   variable: '--font-lato',
   display: 'swap',
   weight: ['400', '700']
-}) 
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -22,6 +22,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>SHYAM VANDANA CONSTRUCTION</title>
+      </head>
       <body className={`${lustria.variable} ${lato.variable}`}>{children}</body>
     </html>
   )

@@ -1,3 +1,14 @@
+.nav {
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+    background: #f7f6f1;
+}
+
 .nav-component {
     height: 3.125rem;
     justify-content: space-between;
