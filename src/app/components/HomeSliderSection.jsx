@@ -30,14 +30,12 @@ const HomeSliderSection = () => {
     const carousel = useRef(null);
     const firstCard = useRef(null);
 
-    const handleLeft = (e) => {
+    const handleLeft = () => {
         carousel.current.scrollLeft += -firstCard.current.offsetWidth;
-        setCurrentProject((prev) => Math.max(0, prev - 1));
     }
 
-    const handleRight = (e) => {
+    const handleRight = () => {
         carousel.current.scrollLeft += firstCard.current.offsetWidth;
-        setCurrentProject((prev) => Math.min(projects.length - 1, prev + 1));
     }
 
     return (
