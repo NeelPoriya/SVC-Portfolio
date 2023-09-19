@@ -98,7 +98,12 @@ const HomeSliderSection = () => {
                         <div className={globalStyles['vertical-line']} />
                         <div className={styles['home-slider-right']}>
                             <div className={styles['carousel-wrapper']}>
-                                <div className={styles['carousel']} ref={carousel}>
+                                <div className={styles['carousel']} ref={carousel} onScroll={() => {
+                                    const cardWidth = firstCard.current.offsetWidth;
+                                    const scrollLeft = carousel.current.scrollLeft;
+
+                                    setCurrentProject(Math.round(scrollLeft / cardWidth))
+                                }}>
                                     <div ref={firstCard} className={styles['card']}>
                                         <Image className={styles['image']} src={'https://images.unsplash.com/photo-1474696100102-01b8519f06f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'} width={2070} height={1380} alt={'project-1'} />
                                     </div>
