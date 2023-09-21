@@ -15,7 +15,7 @@ const ExclusiveSection = () => {
                             <h3 className={styles['aktiv-62']}>
                                 <div className={styles['line-parent']}>
                                     <div className={styles['line-child']}>
-                                        EXCLUSICITY
+                                        EXCLUSIVITY
                                     </div>
                                 </div>
                             </h3>

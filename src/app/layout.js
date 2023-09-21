@@ -1,5 +1,8 @@
+'use client'
 import './globals.css'
 import { Lustria, Lato } from 'next/font/google'
+import { useState } from 'react'
+import Navbar from './components/Navbar'
 
 const lustria = Lustria({
   subsets: ['latin'],
@@ -20,12 +23,23 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const [open, setOpen] = useState(false)
+
   return (
     <html lang="en">
       <head>
         <title>SHYAM VANDANA CONSTRUCTION</title>
       </head>
-      <body className={`${lustria.variable} ${lato.variable}`}>{children}</body>
+      <body
+        style={{
+          overflow: open ? 'hidden' : 'auto',
+        }}
+        className={`${lustria.variable} ${lato.variable}`
+        }>
+
+        <Navbar open={open} setOpen={setOpen} />
+        {children}
+      </body>
     </html>
   )
 }

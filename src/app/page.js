@@ -8,10 +8,10 @@ import LevelSection from './components/LevelSection'
 import HomeSliderSection from './components/HomeSliderSection'
 import ExclusiveSection from './components/ExclusiveSection'
 
-export default function Home() {
+export default function Home({ open, setOpen }) {
+
   return (
     <>
-      <Navbar />
       <HeroSection />
       <VideoSection />
       <NumbersSection />
